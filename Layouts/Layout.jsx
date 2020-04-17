@@ -36,6 +36,13 @@ const Logo = styled.h1`
 	font-stretch: condensed;
 `;
 
+const PageTitle = styled.h1`
+	font-size: 50px;
+	text-align: center;
+	margin-top: 140px;
+	margin-bottom: 70px;
+`;
+
 const Layout = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -49,8 +56,11 @@ const Layout = (props) => {
 				<Logo>JS</Logo>
 				<DropdownLogo clicked={onDropdownLogoClick} />
 			</Container>
-			<Dropdown isOpen={isOpen} />
-			<BodyContainer>{props.children}</BodyContainer>
+			<Dropdown isOpen={isOpen} clicked={onDropdownLogoClick} />
+			<BodyContainer>
+				<PageTitle>{props.title}</PageTitle>
+				{props.children}
+			</BodyContainer>
 		</>
 	);
 };

@@ -1,17 +1,27 @@
 import React from "react";
-import styled from "styled-components";
 
 import Layout from "../Layouts/Layout";
+import InfoCard, {
+	BeforeHeading,
+	CardHeading,
+	Hr,
+	CardContent,
+	CardA,
+} from "../Components/InfoCard";
 
-const Title = styled.h1`
-	font-size: 50px;
-	text-align: center;
-`;
+const lorem =
+	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sedy eirmod temp";
 
 export default () => {
 	return (
-		<Layout>
-			<Title>Welcome</Title>
+		<Layout title="Welcome!">
+			<InfoCard>
+				<BeforeHeading>Hey, I'm</BeforeHeading>
+				<CardHeading>Jujhaar Singh</CardHeading>
+				<Hr />
+				<CardContent>{lorem}</CardContent>
+				<CardA>See More!</CardA>
+			</InfoCard>
 		</Layout>
 	);
 };

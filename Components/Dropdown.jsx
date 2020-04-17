@@ -48,8 +48,13 @@ const LinkContainer = styled.div`
 
 const MyLink = (props) => {
 	return (
-		<Link href={"/" + props.children}>
-			<A>{props.children}</A>
+		<Link
+			href={
+				props.children != "Home"
+					? "/" + props.children.toLowerCase()
+					: "/"
+			}>
+			<A onClick={props.clicked}>{props.children}</A>
 		</Link>
 	);
 };
@@ -59,10 +64,10 @@ const Dropdown = (props) => {
 		<Div className={props.isOpen ? "open" : ""}>
 			<H1>Find Your Way Around...</H1>
 			<LinkContainer>
-				<MyLink>Home</MyLink>
-				<MyLink>Projects</MyLink>
-				<MyLink>Skills</MyLink>
-				<MyLink>Contact</MyLink>
+				<MyLink clicked={props.clicked}>Home</MyLink>
+				<MyLink clicked={props.clicked}>Projects</MyLink>
+				<MyLink clicked={props.clicked}>Skills</MyLink>
+				<MyLink clicked={props.clicked}>Contact</MyLink>
 			</LinkContainer>
 		</Div>
 	);
