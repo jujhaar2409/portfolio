@@ -1,5 +1,6 @@
 import React from "react";
 
+import { projects } from "../data";
 import Layout from "../Layouts/Layout";
 import InfoCard, {
 	BeforeHeading,
@@ -15,13 +16,17 @@ const lorem =
 export default () => {
 	return (
 		<Layout title="Projects">
-			<InfoCard>
-				<BeforeHeading>Hey, I'm</BeforeHeading>
-				<CardHeading>Jujhaar Singh</CardHeading>
-				<Hr />
-				<CardContent>{lorem}</CardContent>
-				<CardA>See More!</CardA>
-			</InfoCard>
+			{projects.map((project) => (
+				<>
+					<InfoCard>
+						<CardHeading>{project.name}</CardHeading>
+						<Hr />
+						<CardContent>{project.description}</CardContent>
+						<CardA href={project.liveLocation}>Live Demo</CardA>
+						<CardA href={project.codeLocation}>See the Code</CardA>
+					</InfoCard>
+				</>
+			))}
 		</Layout>
 	);
 };

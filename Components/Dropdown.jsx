@@ -63,7 +63,7 @@ const MyLink = (props) => {
 
 const Dropdown = (props) => {
 	return (
-		<Div className={props.isOpen ? "open" : ""}>
+		<Div ref={props.dropdownRef} className={props.isOpen ? "open" : ""}>
 			<H1>Find Your Way Around...</H1>
 			<LinkContainer>
 				<MyLink clicked={props.clicked}>Home</MyLink>

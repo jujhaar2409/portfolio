@@ -14,11 +14,11 @@ export default () => {
 					<InfoCard>
 						<CardHeading>{skill.title}</CardHeading>
 						<Hr />
-						{skill.list.map((item) => (
-							<List>
+						<List>
+							{skill.list.map((item) => (
 								<ListItem>{item}</ListItem>
-							</List>
-						))}
+							))}
+						</List>
 					</InfoCard>
 				);
 			})}

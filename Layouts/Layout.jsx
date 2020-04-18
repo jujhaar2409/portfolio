@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 
 import DropdownLogo from "../Components/DropdownLogo";
@@ -43,20 +43,42 @@ const PageTitle = styled.h1`
 	margin-bottom: 70px;
 `;
 
+const Main = styled.div`
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+`;
+
 const Layout = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const dropdownRef = useRef();
+	const dropdownLogoRef = useRef();
 
 	const onDropdownLogoClick = () => {
 		setIsOpen((isOpen) => !isOpen);
 	};
 
+	const clickOutsideDropdown = (e) => {
+		if (e.target !== dropdownRef && isOpen) {
+			onDropdownLogoClick();
+		}
+	};
+
 	return (
 		<>
+			<Main onClick={clickOutsideDropdown} />
 			<Container>
 				<Logo>JS</Logo>
-				<DropdownLogo clicked={onDropdownLogoClick} />
+				<DropdownLogo
+					dropdownLogoRef={dropdownLogoRef}
+					clicked={onDropdownLogoClick}
+				/>
 			</Container>
-			<Dropdown isOpen={isOpen} clicked={onDropdownLogoClick} />
+			<Dropdown
+				dropdownRef={dropdownRef}
+				isOpen={isOpen}
+				clicked={onDropdownLogoClick}
+			/>
 			<BodyContainer>
 				<PageTitle>{props.title}</PageTitle>
 				{props.children}

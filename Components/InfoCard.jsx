@@ -42,14 +42,14 @@ export const Hr = styled.div`
 
 export const CardA = styled.a`
 	color: #fff;
-	height: 35px;
-	width: auto;
 	padding: 5px 10px;
+	margin: 0 5px;
 	font-size: 16px;
 	background-color: #0088ff;
 	border-radius: 30px;
 	border: none;
 	text-decoration: none;
+	display: inline;
 `;
 
 export const CardContent = styled.div`

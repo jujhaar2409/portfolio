@@ -27,10 +27,10 @@ const Ul = styled.ul`
 
 export const ListItem = (props) => {
 	return (
-		<>
+		<div>
 			<ItemMarker />
 			<ItemText>{props.children}</ItemText>
-		</>
+		</div>
 	);
 };
 

@@ -8,6 +8,7 @@ import InfoCard, {
 	CardContent,
 	CardA,
 } from "../Components/InfoCard";
+import List, { ListItem } from "../Components/List";
 
 const lorem =
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sedy eirmod temp";
@@ -16,11 +17,12 @@ export default () => {
 	return (
 		<Layout title="Contact">
 			<InfoCard>
-				<BeforeHeading>Hey, I'm</BeforeHeading>
-				<CardHeading>Jujhaar Singh</CardHeading>
-				<Hr />
-				<CardContent>{lorem}</CardContent>
-				<CardA>See More!</CardA>
+				<List>
+					<ListItem>email:</ListItem>
+					<CardContent>example@mail.com</CardContent>
+					<ListItem>phone:</ListItem>
+					<CardContent>32420482903</CardContent>
+				</List>
 			</InfoCard>
 		</Layout>
 	);

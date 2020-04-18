@@ -25,7 +25,7 @@ const Div = styled.div`
 const DropdownLogo = (props) => {
 	const { clicked } = props;
 	return (
-		<Div onClick={clicked}>
+		<Div ref={props.dropdownLogoRef} onClick={clicked}>
 			<Span></Span>
 			<Span></Span>
 			<Span></Span>
