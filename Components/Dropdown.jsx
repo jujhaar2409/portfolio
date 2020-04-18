@@ -21,6 +21,10 @@ const Div = styled.div`
 	&.open {
 		top: 0%;
 	}
+
+	@media screen and (min-width: 700px) {
+		display: none;
+	}
 `;
 
 const H1 = styled.h1`

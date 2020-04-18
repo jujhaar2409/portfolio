@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import DropdownLogo from "../Components/DropdownLogo";
 import Dropdown from "../Components/Dropdown";
+import NavItems from "../Components/NavItems";
 
 const Container = styled.div`
 	top: 0;
@@ -23,8 +24,13 @@ const Container = styled.div`
 `;
 
 const BodyContainer = styled.div`
-	margin-top: 100px;
+	margin-top: 30px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	@media screen and (min-width: 700px) {
+		margin-top: 30px;
+		display: flex;
+		flex-wrap: wrap;
+	}
 `;
 
 const Logo = styled.h1`
@@ -39,8 +45,12 @@ const Logo = styled.h1`
 const PageTitle = styled.h1`
 	font-size: 50px;
 	text-align: center;
-	margin-top: 140px;
+	margin-top: 110px;
 	margin-bottom: 70px;
+	@media screen and (min-width: 700px) {
+		margin-top: 80px;
+		margin-bottom: 0;
+	}
 `;
 
 const Main = styled.div`
@@ -69,6 +79,7 @@ const Layout = (props) => {
 			<Main onClick={clickOutsideDropdown} />
 			<Container>
 				<Logo>JS</Logo>
+				<NavItems />
 				<DropdownLogo
 					dropdownLogoRef={dropdownLogoRef}
 					clicked={onDropdownLogoClick}
@@ -79,10 +90,8 @@ const Layout = (props) => {
 				isOpen={isOpen}
 				clicked={onDropdownLogoClick}
 			/>
-			<BodyContainer>
-				<PageTitle>{props.title}</PageTitle>
-				{props.children}
-			</BodyContainer>
+			<PageTitle>{props.title}</PageTitle>
+			<BodyContainer>{props.children}</BodyContainer>
 		</>
 	);
 };

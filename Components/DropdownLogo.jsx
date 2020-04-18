@@ -20,6 +20,9 @@ const Div = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	height: 20px;
+	@media screen and (min-width: 700px) {
+		display: none;
+	}
 `;
 
 const DropdownLogo = (props) => {

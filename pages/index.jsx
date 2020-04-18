@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import Layout from "../Layouts/Layout";
 import InfoCard, {
@@ -8,7 +9,6 @@ import InfoCard, {
 	CardContent,
 	CardA,
 } from "../Components/InfoCard";
-import Link from "next/link";
 
 const lorem =
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sedy eirmod temp";
@@ -21,7 +21,7 @@ export default () => {
 				<CardHeading>Jujhaar Singh</CardHeading>
 				<Hr />
 				<CardContent>{lorem}</CardContent>
-				<Link href="/projects">
+				<Link href="/contact">
 					<CardA>See More!</CardA>
 				</Link>
 			</InfoCard>

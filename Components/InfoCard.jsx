@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const Div = styled.div`
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	width: 300px;
+	width: 40%;
+	min-width: 300px;
 	height: auto;
 	padding: 30px 0;
 	margin-left: auto;
