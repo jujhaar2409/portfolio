@@ -12,6 +12,7 @@ const Div = styled.div`
 	text-align: center;
 	border-radius: 20px;
 	box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.16);
+	margin-bottom: 50px;
 `;
 
 export const CardHeading = styled.h2`
