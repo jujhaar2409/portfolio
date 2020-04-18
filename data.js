@@ -1,19 +1,30 @@
+// @ts-nocheck
 export const skills = [
 	{
-		title: "a",
-		list: ["skill 1", "skill 2", "skill 3"],
+		title: "Languages",
+		list: ["Python", "Javascript", "HTML", "CSS"],
 	},
 	{
-		title: "a",
-		list: ["skill 1", "skill 2", "skill 3"],
+		title: "Frontend Web Frameworks",
+		list: ["Reactjs", "Nextj"],
 	},
 	{
-		title: "a",
-		list: ["skill 1", "skill 2", "skill 3"],
+		title: "Backend Web Frameworks",
+		list: ["ExpressJs", "Flask"],
 	},
 	{
-		title: "a",
-		list: ["skill 1", "skill 2", "skill 3"],
+		title: "Python Libraries",
+		list: ["Flask", "Matplotlib", "Tkinter", "Numpy"],
+	},
+	{
+		title: "Other Skills",
+		list: [
+			"Basics of VueJs",
+			"Basics of AngularJs",
+			"Basics of Java",
+			"Basics of Kotlin",
+			"Basics of Go",
+		],
 	},
 ];
 

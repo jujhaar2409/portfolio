@@ -15,6 +15,8 @@ const ItemMarker = styled.span`
 const ItemText = styled.p`
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	display: inline-block;
+	padding-top: 0;
+	padding-bottom: 0;
 	padding-left: 10px;
 	font-size: 21px;
 `;

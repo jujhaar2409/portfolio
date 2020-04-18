@@ -9,13 +9,14 @@ const Div = styled.div`
 	position: fixed;
 	top: -100%;
 	left: 0;
-	width: 100vw;
-	height: 90vh;
+	width: 90vw;
+	height: auto;
 	padding-top: 100px;
 	padding-left: 20px;
 	padding-right: 20px;
 	transition: top ease-in-out 0.6s;
-	border-bottom: solid #000 1px;
+	border-radius: 50px;
+	box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
 
 	&.open {
 		top: 0%;
@@ -29,6 +30,7 @@ const H1 = styled.h1`
 	font-size: 50px;
 	font-weight: bolder;
 	line-height: 0.95;
+	z-index: 100;
 `;
 
 const A = styled.a`
