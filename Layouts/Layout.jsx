@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import DropdownLogo from "../Components/DropdownLogo";
@@ -68,15 +68,25 @@ const Layout = (props) => {
 		setIsOpen((isOpen) => !isOpen);
 	};
 
-	const clickOutsideDropdown = (e) => {
-		if (e.target !== dropdownRef && isOpen) {
-			onDropdownLogoClick();
+	useEffect(() => {
+		function handleClickOutside(event) {
+			if (
+				!dropdownRef.current.contains(event.target) &&
+				!dropdownLogoRef.current.contains(event.target)
+			) {
+				setIsOpen(false);
+			}
 		}
-	};
+		// Bind the event listener
+		document.addEventListener("click", handleClickOutside);
+		return () => {
+			// Unbind the event listener on clean up
+			document.removeEventListener("click", handleClickOutside);
+		};
+	}, [dropdownRef]);
 
 	return (
 		<>
-			<Main onClick={clickOutsideDropdown} />
 			<Container>
 				<Logo>JS</Logo>
 				<NavItems />
