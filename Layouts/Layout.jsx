@@ -53,12 +53,6 @@ const PageTitle = styled.h1`
 	}
 `;
 
-const Main = styled.div`
-	position: fixed;
-	height: 100vh;
-	width: 100vw;
-`;
-
 const Layout = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef();
@@ -93,6 +87,7 @@ const Layout = (props) => {
 				<DropdownLogo
 					dropdownLogoRef={dropdownLogoRef}
 					clicked={onDropdownLogoClick}
+					isOpen={isOpen}
 				/>
 			</Container>
 			<Dropdown

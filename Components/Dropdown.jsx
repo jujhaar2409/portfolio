@@ -14,8 +14,8 @@ const Div = styled.div`
 	padding-top: 100px;
 	padding-left: 20px;
 	padding-right: 20px;
-	transition: top ease-in-out 0.6s;
-	border-radius: 50px;
+	transition: top ease-in-out 0.4s;
+	border-radius: 20px;
 	box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
 
 	&.open {
