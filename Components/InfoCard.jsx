@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Div = styled.div`
+export const Div = styled.div`
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	width: 40%;
 	min-width: 300px;
@@ -35,7 +35,7 @@ export const BeforeHeading = styled.h3`
 
 export const Hr = styled.div`
 	height: 0;
-	width: 99%;
+	width: 99.5%;
 	background-color: #0088ff;
 	border: #0088ff solid 1.5px;
 	margin-top: 30px;
@@ -46,11 +46,17 @@ export const CardA = styled.a`
 	padding: 5px 10px;
 	margin: 0 5px;
 	font-size: 16px;
-	background-color: #0088ff;
+	background-image: linear-gradient(to right, #0088ff 0%, #4fffd3 160%);
 	border-radius: 30px;
 	border: none;
 	text-decoration: none;
 	display: inline;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+	&:hover {
+		/* box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.2); */
+		letter-spacing: 1px;
+	}
 `;
 
 export const CardContent = styled.div`

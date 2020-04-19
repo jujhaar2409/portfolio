@@ -21,7 +21,7 @@ export default () => {
 				<CardHeading>Jujhaar Singh</CardHeading>
 				<Hr />
 				<CardContent>{lorem}</CardContent>
-				<Link href="/contact">
+				<Link href="/projects">
 					<CardA>See More!</CardA>
 				</Link>
 			</InfoCard>

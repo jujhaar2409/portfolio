@@ -1,29 +1,54 @@
 import React from "react";
+import styled from "styled-components";
 
 import Layout from "../Layouts/Layout";
-import InfoCard, {
-	BeforeHeading,
-	CardHeading,
-	Hr,
-	CardContent,
-	CardA,
-} from "../Components/InfoCard";
-import List, { ListItem } from "../Components/List";
+import { Div, Hr } from "../Components/InfoCard";
 
-const lorem =
-	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sedy eirmod temp";
+const ContactType = styled.h1`
+	color: #0088ff;
+	font-size: 25px;
+	padding-left: 35px;
+`;
+
+const ContactInfo = styled.p`
+	font-size: 19px;
+	font-weight: bold;
+	padding-left: 55px;
+	padding-bottom: 40px;
+`;
+
+const ContactLink = styled.a`
+	font-size: 20px;
+	padding-left: 35px;
+	padding-top: 90px;
+	color: #0088ff;
+	text-decoration: none;
+`;
+
+const MyDiv = styled.div`
+	padding: 0;
+	margin-top: 25px;
+`;
+
+const MyInfoCard = styled(Div)`
+	text-align: left;
+`;
 
 export default () => {
 	return (
 		<Layout title="Contact">
-			<InfoCard>
-				<List>
-					<ListItem>email:</ListItem>
-					<CardContent>example@mail.com</CardContent>
-					<ListItem>phone:</ListItem>
-					<CardContent>32420482903</CardContent>
-				</List>
-			</InfoCard>
+			<MyInfoCard>
+				<ContactType>Email</ContactType>
+				<ContactInfo>example@mail.com</ContactInfo>
+				<ContactType>Phone</ContactType>
+				<ContactInfo>32420482903</ContactInfo>
+				<Hr />
+				<MyDiv>
+					<ContactLink href="https://github.com/jujhaar2409">
+						My Github Page
+					</ContactLink>
+				</MyDiv>
+			</MyInfoCard>
 		</Layout>
 	);
 };

@@ -19,7 +19,7 @@ const Container = styled.div`
 	color: #fff;
 	padding: 0px 20px 0px 20px;
 	font-family: "Bahnschrift";
-	letter-spacing: -2px;
+	letter-spacing: -1.5px;
 	z-index: 101;
 `;
 

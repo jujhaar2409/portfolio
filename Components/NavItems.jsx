@@ -7,9 +7,16 @@ const A = styled.a`
 	color: #fff;
 	font-size: 30px;
 	font-weight: bold;
-	padding: 10px;
+	padding: 14px 0 4px 0;
+	text-align: center;
 	margin: 0;
 	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+	width: 115px;
+
+	&:hover {
+		letter-spacing: 0.5px;
+	}
 `;
 
 const LinkContainer = styled.div`
@@ -17,7 +24,7 @@ const LinkContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-left: auto;
-	margin-right: 50px;
+	margin-right: 35px;
 	@media screen and (max-width: 700px) {
 		display: none;
 	}
