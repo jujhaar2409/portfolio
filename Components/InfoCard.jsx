@@ -1,8 +1,9 @@
 // @ts-nocheck
 import React from "react";
 import styled from "styled-components";
+import { useSpring, animated } from "react-spring";
 
-export const Div = styled.div`
+export const Div = styled(animated.div)`
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	width: 40%;
 	min-width: 300px;
@@ -66,7 +67,19 @@ export const CardContent = styled.div`
 `;
 
 const Card = (props) => {
-	return <Div>{props.children}</Div>;
+	const springProps = useSpring({
+		config: {
+			tension: 100,
+			fricton: 1,
+		},
+		opacity: 1,
+		transform: `translateY(0px)`,
+		from: {
+			opacity: 0.3,
+			transform: `translateY(20px)`,
+		},
+	});
+	return <Div style={springProps}>{props.children}</Div>;
 };
 
 export default Card;
