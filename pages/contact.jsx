@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { animated, useSpring } from "react-spring";
 
 import Layout from "../Layouts/Layout";
 import { Div, Hr } from "../Components/InfoCard";
@@ -30,14 +31,27 @@ const MyDiv = styled.div`
 	margin-top: 25px;
 `;
 
-const MyInfoCard = styled(Div)`
+const MyInfoCard = styled(animated(Div))`
 	text-align: left;
 `;
 
 export default () => {
+	const springProps = useSpring({
+		config: {
+			mass: 4,
+			tension: 200,
+			fricton: 40,
+		},
+		opacity: 1,
+		transform: `translateY(0px)`,
+		from: {
+			opacity: 0.3,
+			transform: `translateY(20px)`,
+		},
+	});
 	return (
 		<Layout title="Contact">
-			<MyInfoCard>
+			<MyInfoCard style={springProps}>
 				<ContactType>Email</ContactType>
 				<ContactInfo>example@mail.com</ContactInfo>
 				<ContactType>Phone</ContactType>

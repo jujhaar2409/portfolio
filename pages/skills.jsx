@@ -1,25 +1,39 @@
 // @ts-nocheck
 import React from "react";
+import { useTrail } from "react-spring";
 
 import Layout from "../Layouts/Layout";
-import InfoCard, { CardHeading, Hr } from "../Components/InfoCard";
+import { Div, CardHeading, Hr } from "../Components/InfoCard";
 import List, { ListItem } from "../Components/List";
 import { skills } from "../data";
 
 export default () => {
+	const trail = useTrail(skills.length, {
+		config: {
+			mass: 4,
+			tension: 300,
+			fricton: 40,
+		},
+		opacity: 1,
+		transform: `translateY(0px)`,
+		from: {
+			opacity: 0.3,
+			transform: `translateY(20px)`,
+		},
+	});
 	return (
 		<Layout title="Skills">
-			{skills.map((skill) => {
+			{trail.map((anime, index) => {
 				return (
-					<InfoCard>
-						<CardHeading>{skill.title}</CardHeading>
+					<Div style={anime}>
+						<CardHeading>{skills[index].title}</CardHeading>
 						<Hr />
 						<List>
-							{skill.list.map((item) => (
+							{skills[index].list.map((item) => (
 								<ListItem>{item}</ListItem>
 							))}
 						</List>
-					</InfoCard>
+					</Div>
 				);
 			})}
 		</Layout>

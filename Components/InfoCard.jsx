@@ -69,8 +69,9 @@ export const CardContent = styled.div`
 const Card = (props) => {
 	const springProps = useSpring({
 		config: {
-			tension: 100,
-			fricton: 1,
+			mass: 4,
+			tension: 200,
+			fricton: 40,
 		},
 		opacity: 1,
 		transform: `translateY(0px)`,
