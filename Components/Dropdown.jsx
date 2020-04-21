@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -41,10 +41,19 @@ const A = styled.a`
 	color: #0088ff;
 	font-size: 30px;
 	font-weight: bold;
-	display: block;
+	display: grid;
+	padding-right: 0;
+	margin-right: auto;
+	/* width: 150px; */
 	padding: 0;
 	margin: 0;
 	margin-bottom: 45px;
+
+	&.selected {
+		text-decoration: underline;
+		font-style: italic;
+		/* border-bottom: black 5px dotted; */
+	}
 `;
 
 const LinkContainer = styled.div`
@@ -53,6 +62,18 @@ const LinkContainer = styled.div`
 `;
 
 const MyLink = (props) => {
+	const [classname, setClassname] = useState("");
+	useEffect(() => {
+		let loc = window.location.pathname.split("/")[1];
+		if (loc === "" && props.children.toLowerCase() === "home") {
+			setClassname("selected");
+		} else if (loc === props.children.toLowerCase()) {
+			setClassname("selected");
+		} else {
+			setClassname("");
+		}
+	}, []);
+
 	return (
 		<Link
 			href={
@@ -60,7 +81,9 @@ const MyLink = (props) => {
 					? "/" + props.children.toLowerCase()
 					: "/"
 			}>
-			<A onClick={props.clicked}>{props.children}</A>
+			<A className={classname} onClick={props.clicked}>
+				{props.children}
+			</A>
 		</Link>
 	);
 };
