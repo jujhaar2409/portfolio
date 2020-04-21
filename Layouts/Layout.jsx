@@ -18,14 +18,14 @@ const Container = styled.div`
 	background-color: #0088ff;
 	color: #fff;
 	padding: 0px 20px 0px 20px;
-	font-family: "Bahnschrift";
+	font-family: "Bahnschrift" !important;
 	letter-spacing: -1.5px;
 	z-index: 101;
 `;
 
 const BodyContainer = styled.div`
 	margin-top: 30px;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: Verdana !important;
 	@media screen and (min-width: 700px) {
 		margin-top: 30px;
 		display: flex;
