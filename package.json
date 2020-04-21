@@ -8,6 +8,7 @@
 		"export": "next export"
 	},
 	"dependencies": {
+		"global": "^4.4.0",
 		"next": "^9.3.5",
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0",

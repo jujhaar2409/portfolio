@@ -1,11 +1,12 @@
 // @ts-nocheck
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+// import window from "global";
 
 const A = styled.a`
 	color: #fff;
-	font-size: 30px;
+	font-size: 27px;
 	font-weight: bold;
 	padding: 14px 0 4px 0;
 	text-align: center;
@@ -14,7 +15,15 @@ const A = styled.a`
 	transition: all 0.15s ease-in-out;
 	width: 115px;
 
-	&:hover {
+	&.selected {
+		/* font-style: italic; */
+		/* font-family: "Times New Roman", Times, serif; */
+		/* border: black solid 1px; */
+		background-color: #007deb;
+	}
+
+	&:hover:not(.selected),
+	&:active {
 		letter-spacing: 0.5px;
 	}
 `;
@@ -42,6 +51,19 @@ const NavItems = () => {
 };
 
 const MyLink = (props) => {
+	const [classname, setClassname] = useState("");
+	useEffect(() => {
+		console.log(window);
+		let loc = window.location.pathname.split("/")[1];
+		if (loc === "" && props.children.toLowerCase() === "home") {
+			setClassname("selected");
+		} else if (loc === props.children.toLowerCase()) {
+			setClassname("selected");
+		} else {
+			setClassname("");
+		}
+	}, []);
+
 	return (
 		<Link
 			href={
@@ -49,7 +71,9 @@ const MyLink = (props) => {
 					? "/" + props.children.toLowerCase()
 					: "/"
 			}>
-			<A onClick={props.clicked}>{props.children}</A>
+			<A className={classname} onClick={props.clicked}>
+				{props.children}
+			</A>
 		</Link>
 	);
 };
