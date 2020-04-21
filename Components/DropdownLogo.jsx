@@ -14,6 +14,7 @@ const Span1 = styled.p`
 	position: absolute;
 	right: 60px;
 	top: 17px;
+	background-color: #fff;
 	&.open {
 		top: 27px;
 		transform: translateY(11px);
@@ -33,6 +34,7 @@ const Span2 = styled.p`
 	position: absolute;
 	right: 60px;
 	top: 27px;
+	background-color: #fff;
 	&.open {
 		transform: translateX(-17.5px);
 		width: 0;
@@ -51,6 +53,7 @@ const Span3 = styled.p`
 	position: absolute;
 	right: 60px;
 	top: 37px;
+	background-color: #fff;
 
 	&.open {
 		top: 27px;

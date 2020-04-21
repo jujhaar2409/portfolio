@@ -47,6 +47,7 @@ const PageTitle = styled.h1`
 	text-align: center;
 	margin-top: 110px;
 	margin-bottom: 70px;
+	font-family: Verdana !important;
 	@media screen and (min-width: 700px) {
 		margin-top: 80px;
 		margin-bottom: 0;

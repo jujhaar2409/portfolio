@@ -5,10 +5,9 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"export": "next export"
+		"export": "next build && next export"
 	},
 	"dependencies": {
-		"global": "^4.4.0",
 		"next": "^9.3.5",
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0",
@@ -16,10 +15,6 @@
 		"styled-components": "^5.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "12.0.12",
-		"@types/react": "16.8.23",
-		"@types/react-dom": "16.8.4",
-		"@types/styled-components": "5.0.1",
 		"babel-plugin-styled-components": "^1.10.0"
 	},
 	"license": "ISC"

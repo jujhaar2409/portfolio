@@ -31,7 +31,7 @@ export const BeforeHeading = styled.h3`
 	text-align: center;
 	margin: 0;
 	padding: 0;
-	font-weight: lighter;
+	font-weight: 400;
 `;
 
 export const Hr = styled.div`
