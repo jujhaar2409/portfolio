@@ -51,8 +51,6 @@ const A = styled.a`
 
 	&.selected {
 		text-decoration: underline;
-		font-style: italic;
-		/* border-bottom: black 5px dotted; */
 	}
 `;
 
