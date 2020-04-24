@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
+import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
-import { useSpring, animated } from "react-spring";
 
 export const Div = styled(animated.div)`
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -43,20 +43,23 @@ export const Hr = styled.div`
 `;
 
 export const CardA = styled.a`
-	color: #fff;
 	padding: 5px 10px;
+	color: #000;
 	margin: 0 5px;
 	font-size: 16px;
-	background-image: linear-gradient(to right, #0088ff 0%, #4fffd3 160%);
+	/* background-image: linear-gradient(to right, #0088ff 0%, #4fffd3 160%); */
 	border-radius: 30px;
-	border: none;
+	border: 1px rgba(0, 136, 255, 0.3) solid;
 	text-decoration: none;
 	display: inline;
 	cursor: pointer;
-	transition: all 0.15s ease-in-out;
+	transition: all 0.25s ease-in-out;
 	&:hover {
-		/* box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.2); */
-		letter-spacing: 1px;
+		transform: translateX(100px);
+		border: 1px rgba(0, 136, 255, 0) solid;
+		box-shadow: 5px 5px 35px rgba(0, 136, 255, 0.4);
+		color: #0088ff;
+		/* letter-spacing: 1px; */
 	}
 `;
 
