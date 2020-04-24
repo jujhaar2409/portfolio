@@ -6,7 +6,7 @@ import styled from "styled-components";
 export const Div = styled(animated.div)`
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	width: 40%;
-	min-width: 300px;
+	min-width: 340px;
 	height: auto;
 	padding: 30px 0;
 	margin-left: auto;
@@ -47,7 +47,6 @@ export const CardA = styled.a`
 	color: #000;
 	margin: 0 5px;
 	font-size: 16px;
-	/* background-image: linear-gradient(to right, #0088ff 0%, #4fffd3 160%); */
 	border-radius: 30px;
 	border: 1px rgba(0, 136, 255, 0.3) solid;
 	text-decoration: none;
@@ -55,11 +54,9 @@ export const CardA = styled.a`
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
 	&:hover {
-		transform: translateX(100px);
 		border: 1px rgba(0, 136, 255, 0) solid;
 		box-shadow: 5px 5px 35px rgba(0, 136, 255, 0.4);
 		color: #0088ff;
-		/* letter-spacing: 1px; */
 	}
 `;
 

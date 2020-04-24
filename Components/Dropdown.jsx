@@ -1,7 +1,7 @@
 //@ts-nocheck
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const Div = styled.div`
 	background-color: #fff;

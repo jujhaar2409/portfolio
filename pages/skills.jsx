@@ -1,16 +1,15 @@
 // @ts-nocheck
 import React from "react";
 import { useTrail } from "react-spring";
-
-import Layout from "../Layouts/Layout";
-import { Div, CardHeading, Hr } from "../Components/InfoCard";
+import { CardHeading, Div, Hr } from "../Components/InfoCard";
 import List, { ListItem } from "../Components/List";
 import { skills } from "../data";
+import Layout from "../Layouts/Layout";
 
 export default () => {
 	const trail = useTrail(skills.length, {
 		config: {
-			mass: 4,
+			mass: 2,
 			tension: 300,
 			fricton: 40,
 		},
