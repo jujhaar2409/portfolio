@@ -44,7 +44,6 @@ const A = styled.a`
 	display: grid;
 	padding-right: 0;
 	margin-right: auto;
-	/* width: 150px; */
 	padding: 0;
 	margin: 0;
 	margin-bottom: 45px;
