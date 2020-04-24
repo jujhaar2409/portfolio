@@ -1,9 +1,10 @@
 // @ts-nocheck
 import React from "react";
 import { useTrail } from "react-spring";
+
 import { CardHeading, Div, Hr } from "../Components/InfoCard";
 import List, { ListItem } from "../Components/List";
-import { skills } from "../data";
+import { skills } from "../content/data";
 import Layout from "../Layouts/Layout";
 
 export default () => {

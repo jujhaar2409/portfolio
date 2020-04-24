@@ -1,6 +1,6 @@
 import React from "react";
 
-import { projects } from "../data";
+import { projects } from "../content/data";
 import Layout from "../Layouts/Layout";
 import InfoCard, {
 	BeforeHeading,

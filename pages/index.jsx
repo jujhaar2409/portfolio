@@ -1,17 +1,17 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
 
-import Layout from "../Layouts/Layout";
+import { index } from "../content/data";
 import InfoCard, {
 	BeforeHeading,
+	CardA,
+	CardContent,
 	CardHeading,
 	Hr,
-	CardContent,
-	CardA,
 } from "../Components/InfoCard";
+import Layout from "../Layouts/Layout";
 
-const lorem =
-	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sedy eirmod temp";
+const indexPageContent = index;
 
 export default () => {
 	return (
@@ -20,7 +20,7 @@ export default () => {
 				<BeforeHeading>Hey, I'm</BeforeHeading>
 				<CardHeading>Jujhaar Singh</CardHeading>
 				<Hr />
-				<CardContent>{lorem}</CardContent>
+				<CardContent>{indexPageContent}</CardContent>
 				<Link href="/projects">
 					<CardA>See More!</CardA>
 				</Link>
