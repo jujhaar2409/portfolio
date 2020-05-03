@@ -6,99 +6,99 @@ import Dropdown from "../Components/Dropdown";
 import NavItems from "../Components/NavItems";
 
 const Container = styled.div`
-	top: 0;
-	left: 0;
-	position: fixed;
-	width: 100vw;
-	height: 57px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: #0088ff;
-	color: #fff;
-	padding: 0px 20px 0px 20px;
-	font-family: "Bahnschrift" !important;
-	letter-spacing: -1.5px;
-	z-index: 101;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0088ff;
+  color: #fff;
+  padding: 0px 20px 0px 20px;
+  font-family: "Bahnschrift" !important;
+  letter-spacing: -1.5px;
+  z-index: 101;
 `;
 
 const BodyContainer = styled.div`
-	margin-top: 30px;
-	font-family: Verdana !important;
-	@media screen and (min-width: 700px) {
-		margin-top: 30px;
-		display: flex;
-		flex-wrap: wrap;
-	}
+  margin-top: 30px;
+  font-family: Verdana !important;
+  @media screen and (min-width: 700px) {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 const Logo = styled.h1`
-	font-size: 34px;
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
-	margin-top: 11px;
-	font-stretch: condensed;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-top: 11px;
+  font-stretch: condensed;
 `;
 
 const PageTitle = styled.h1`
-	font-size: 50px;
-	text-align: center;
-	margin-top: 110px;
-	margin-bottom: 70px;
-	font-family: Verdana !important;
-	@media screen and (min-width: 700px) {
-		margin-top: 80px;
-		margin-bottom: 0;
-	}
+  font-size: 50px;
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 70px;
+  font-family: Verdana !important;
+  @media screen and (min-width: 700px) {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
 `;
 
 const Layout = (props) => {
-	const [isOpen, setIsOpen] = useState(false);
-	const dropdownRef = useRef();
-	const dropdownLogoRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef();
+  const dropdownLogoRef = useRef();
 
-	const onDropdownLogoClick = () => {
-		setIsOpen((isOpen) => !isOpen);
-	};
+  const onDropdownLogoClick = () => {
+    setIsOpen((isOpen) => !isOpen);
+  };
 
-	useEffect(() => {
-		function handleClickOutside(event) {
-			if (
-				!dropdownRef.current.contains(event.target) &&
-				!dropdownLogoRef.current.contains(event.target)
-			) {
-				setIsOpen(false);
-			}
-		}
-		// Bind the event listener
-		document.addEventListener("click", handleClickOutside);
-		return () => {
-			// Unbind the event listener on clean up
-			document.removeEventListener("click", handleClickOutside);
-		};
-	}, [dropdownRef]);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        !dropdownRef.current.contains(event.target) &&
+        !dropdownLogoRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
-	return (
-		<>
-			<Container>
-				<Logo>JS</Logo>
-				<NavItems />
-				<DropdownLogo
-					dropdownLogoRef={dropdownLogoRef}
-					clicked={onDropdownLogoClick}
-					isOpen={isOpen}
-				/>
-			</Container>
-			<Dropdown
-				dropdownRef={dropdownRef}
-				isOpen={isOpen}
-				clicked={onDropdownLogoClick}
-			/>
-			<PageTitle>{props.title}</PageTitle>
-			<BodyContainer>{props.children}</BodyContainer>
-		</>
-	);
+  return (
+    <>
+      <Container>
+        <Logo>JS</Logo>
+        <NavItems />
+        <DropdownLogo
+          dropdownLogoRef={dropdownLogoRef}
+          clicked={onDropdownLogoClick}
+          isOpen={isOpen}
+        />
+      </Container>
+      <Dropdown
+        dropdownRef={dropdownRef}
+        isOpen={isOpen}
+        clicked={onDropdownLogoClick}
+      />
+      <PageTitle>{props.title}</PageTitle>
+      <BodyContainer>{props.children}</BodyContainer>
+    </>
+  );
 };
 
 export default Layout;
