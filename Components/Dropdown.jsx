@@ -29,7 +29,7 @@ const Div = styled.div`
 const H1 = styled.h1`
   padding: 0;
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
   font-size: 50px;
   font-weight: bolder;
   line-height: 0.95;
@@ -46,6 +46,7 @@ const A = styled.a`
   padding: 0;
   margin: 0;
   margin-bottom: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 
   &.selected {
     text-decoration: underline;
