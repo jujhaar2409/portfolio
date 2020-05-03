@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
@@ -69,7 +68,8 @@ const MyLink = (props) => {
 				props.children != "Home"
 					? "/" + props.children.toLowerCase()
 					: "/"
-			}>
+			}
+		>
 			<A className={classname} onClick={props.clicked}>
 				{props.children}
 			</A>

@@ -1,4 +1,3 @@
-//@ts-nocheck
 import React from "react";
 import styled from "styled-components";
 
@@ -87,7 +86,8 @@ const DropdownLogo = (props) => {
 		<Div
 			className={isOpen ? "open" : ""}
 			ref={props.dropdownLogoRef}
-			onClick={clicked}>
+			onClick={clicked}
+		>
 			<Span1 className={isOpen ? "open" : ""}></Span1>
 			<Span2 className={isOpen ? "open" : ""}></Span2>
 			<Span3 className={isOpen ? "open" : ""}></Span3>
