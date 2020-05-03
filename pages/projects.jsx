@@ -10,9 +10,6 @@ import InfoCard, {
 	CardA,
 } from "../Components/InfoCard";
 
-const lorem =
-	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sedy eirmod temp";
-
 export default () => {
 	return (
 		<Layout title="Projects">
