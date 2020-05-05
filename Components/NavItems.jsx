@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import styled from "styled-components";
-// import window from "global";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
 
 const A = styled.a`
   color: #fff;
@@ -15,9 +14,6 @@ const A = styled.a`
   width: 115px;
 
   &.selected {
-    /* font-style: italic; */
-    /* font-family: "Times New Roman", Times, serif; */
-    /* border: black solid 1px; */
     background-color: #007deb;
   }
 
@@ -50,21 +46,21 @@ const NavItems = () => {
 };
 
 const MyLink = (props) => {
-  const [classname, setClassname] = useState("");
+  const [classname, setClassname] = useState('');
   useEffect(() => {
-    let loc = window.location.pathname.split("/")[1];
-    if (loc === "" && props.children.toLowerCase() === "home") {
-      setClassname("selected");
+    let loc = window.location.pathname.split('/')[1];
+    if (loc === '' && props.children.toLowerCase() === 'home') {
+      setClassname('selected');
     } else if (loc === props.children.toLowerCase()) {
-      setClassname("selected");
+      setClassname('selected');
     } else {
-      setClassname("");
+      setClassname('');
     }
   }, []);
 
   return (
     <Link
-      href={props.children != "Home" ? "/" + props.children.toLowerCase() : "/"}
+      href={props.children != 'Home' ? '/' + props.children.toLowerCase() : '/'}
     >
       <A className={classname} onClick={props.clicked}>
         {props.children}
