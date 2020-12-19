@@ -46,4 +46,4 @@ export const projects = [
 ];
 
 export const index =
-  'changes made: Hey I am Jujhaar Singh, currently a fresher at IIT Bombay. I enjoy coding. I do it in my free time as a hobby. Some of my skills and interests are listed on this web page. Feel free to contact me if you find something interesting! To learn more about me click the button below!';
+  'Hey I am Jujhaar Singh, currently a fresher at IIT Bombay. I enjoy coding. I do it in my free time as a hobby. Some of my skills and interests are listed on this web page. Feel free to contact me if you find something interesting! To learn more about me click the button below!';
