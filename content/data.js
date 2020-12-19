@@ -1,15 +1,24 @@
 export const skills = [
   {
     title: 'Languages',
-    list: ['Python', 'Javascript', 'HTML', 'CSS'],
+    list: [
+      'Python',
+      'Javascript',
+      'Typescript',
+      'Golang',
+      'C++',
+      'Java',
+      'HTML',
+      'CSS',
+    ],
   },
   {
     title: 'Frontend Web Frameworks',
-    list: ['Reactjs', 'Nextj'],
+    list: ['Reactjs', 'Nextjs'],
   },
   {
     title: 'Backend Web Frameworks',
-    list: ['ExpressJs', 'Flask'],
+    list: ['ExpressJs', 'Flask', 'Echo(go)', 'Nextjs'],
   },
   {
     title: 'Python Libraries',
@@ -18,11 +27,10 @@ export const skills = [
   {
     title: 'Other Skills',
     list: [
-      'Basics of VueJs',
-      'Basics of AngularJs',
-      'Basics of Java',
+      'Basics of Android development',
+      'Basics of iOS development',
+      'Basics of Spring Framework for Java',
       'Basics of Kotlin',
-      'Basics of Go',
     ],
   },
 ];
