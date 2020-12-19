@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { animated, useSpring } from "react-spring";
+import React from 'react';
+import styled from 'styled-components';
+import { animated, useSpring } from 'react-spring';
 
-import Layout from "../Layouts/Layout";
-import { Div, Hr } from "../Components/InfoCard";
+import Layout from '../Layouts/Layout';
+import { Div, Hr } from '../Components/InfoCard';
+import { contact } from '../content/data';
 
 const ContactType = styled.h1`
   color: #0088ff;
@@ -18,17 +19,17 @@ const ContactInfo = styled.p`
   padding-bottom: 40px;
 `;
 
-const ContactLink = styled.a`
-  font-size: 20px;
-  padding-left: 35px;
-  padding-top: 90px;
+const SocialLogoLink = styled.a`
+  font-size: 40px;
   color: #0088ff;
   text-decoration: none;
 `;
 
 const MyDiv = styled.div`
-  padding: 0;
-  margin-top: 25px;
+  display: flex;
+  padding-top: 30px;
+  height: fit-content;
+  justify-content: space-evenly;
 `;
 
 const MyInfoCard = styled(animated(Div))`
@@ -53,14 +54,20 @@ export default () => {
     <Layout title="Contact">
       <MyInfoCard style={springProps}>
         <ContactType>Email</ContactType>
-        <ContactInfo>example@mail.com</ContactInfo>
+        <ContactInfo>{contact.email}</ContactInfo>
         <ContactType>Phone</ContactType>
-        <ContactInfo>32420482903</ContactInfo>
+        <ContactInfo>{contact.number}</ContactInfo>
         <Hr />
         <MyDiv>
-          <ContactLink href="https://github.com/jujhaar2409">
-            My Github Page
-          </ContactLink>
+          <SocialLogoLink href="https://www.instagram.com/_jujhaar_singh_/">
+            <i className="fab fa-instagram"></i>
+          </SocialLogoLink>
+          <SocialLogoLink href="https://www.linkedin.com/in/jujhaar-singh-984a861b5/">
+            <i className="fab fa-linkedin"></i>
+          </SocialLogoLink>
+          <SocialLogoLink href="https://github.com/jujhaar2409">
+            <i className="fab fa-github-square"></i>
+          </SocialLogoLink>
         </MyDiv>
       </MyInfoCard>
     </Layout>
