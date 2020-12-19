@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
-import styled from "styled-components";
+import React, { useState, useRef, useEffect } from 'react';
+import styled from 'styled-components';
 
-import DropdownLogo from "../Components/DropdownLogo";
-import Dropdown from "../Components/Dropdown";
-import NavItems from "../Components/NavItems";
+import DropdownLogo from '../Components/DropdownLogo';
+import Dropdown from '../Components/Dropdown';
+import NavItems from '../Components/NavItems';
 
 const Container = styled.div`
   top: 0;
@@ -17,7 +17,7 @@ const Container = styled.div`
   background-color: #0088ff;
   color: #fff;
   padding: 0px 20px 0px 20px;
-  font-family: "Bahnschrift" !important;
+  font-family: 'Verdana' !important;
   letter-spacing: -1.5px;
   z-index: 101;
 `;
@@ -72,10 +72,10 @@ const Layout = (props) => {
       }
     }
     // Bind the event listener
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [dropdownRef]);
 

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const A = styled.a`
   color: #fff;
-  font-size: 27px;
-  font-weight: bold;
+  font-size: 25px;
+  /* font-weight: bold; */
   padding: 14px 0 4px 0;
   text-align: center;
   margin: 0;
