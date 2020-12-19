@@ -1,4 +1,9 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  basePath: '/portfolio/site',
-  assetPrefix: '/portfolio/site/',
+  // Use the CDN in production and localhost for development.
+  assetPrefix: isProd
+    ? 'https://cdn.statically.io/gh/jujhaar2409/portfolio/ghpages-deploy/'
+    : '',
+  basePath: isProd ? '/portfolio' : '',
 };
