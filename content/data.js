@@ -38,4 +38,4 @@ export const projects = [
 ];
 
 export const index =
-  'Hey I am an aspiring Computer Engineer currently in 12th Grade and soon to go to college. I found that I enjoyed creating things with my coding skills. I can now create interactive, mobile first websites which are interactive and engaging. To learn more about me click the button below!';
+  'Hey I am Jujhaar Singh, currently a fresher at IIT Bombay. I enjoy coding. I do it in my free time as a hobby. Some of my skills and interests are listed on this web page. Feel free to contact me if you find something interesting! To learn more about me click the button below!';
