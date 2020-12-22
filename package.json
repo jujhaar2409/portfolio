@@ -5,7 +5,8 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"export": "next build && next export"
+		"export": "next build && next export",
+		"export-to-docs": "next build && next export && rm -rf docs && mv ./out ./docs"
 	},
 	"dependencies": {
 		"@types/next": "^9.0.0",
