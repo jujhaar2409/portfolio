@@ -45,10 +45,5 @@ export const projects = [
   },
 ];
 
-export const contact = {
-  number: '9637496851',
-  email: 'jujhaar.singh.123@gmail.com',
-};
-
 export const index =
   'Hey I am Jujhaar Singh, currently a fresher at IIT Bombay. I enjoy coding. I do it in my free time as a hobby. Some of my skills and interests are listed on this web page. Feel free to contact me if you find something interesting! To learn more about me click the button below!';
