@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-import { index } from '../content/data';
+import { index, contact } from '../content/data';
 import InfoCard, {
   BeforeHeading,
   CardA,
@@ -52,10 +52,12 @@ export default () => {
           <SocialLogoLink href="https://github.com/jujhaar2409">
             <i className="fab fa-github-square"></i>
           </SocialLogoLink>
-          <SocialLogoLink href="http://api.whatsapp.com/send?phone=9637496851">
+          <SocialLogoLink
+            href={`http://api.whatsapp.com/send?phone=${contact.phone}`}
+          >
             <i className="fab fa-whatsapp"></i>
           </SocialLogoLink>
-          <SocialLogoLink href="mailto:jujhaar.singh.123@gmail.com">
+          <SocialLogoLink href={`mailto:${contact.email}`}>
             <i className="fas fa-envelope"></i>
           </SocialLogoLink>
           <SocialLogoLink href="https://www.instagram.com/_jujhaar_singh_/">
