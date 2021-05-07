@@ -6,8 +6,7 @@ const MyLink = (props) => {
   const [selected , setSelected] = useState(false);
   useEffect(() => {
     const split = window.location.pathname.split('/');
-    const loc = split[split.length - 1]
-    if ((loc === "" && props.children.toLowerCase() === "home") || loc === props.children.toLowerCase()) {
+    if ((split.length === 2 && props.children.toLowerCase() === "home") || (split[2] === props.children.toLowerCase())) {
       setSelected(true)
     } else {
       setSelected(false)

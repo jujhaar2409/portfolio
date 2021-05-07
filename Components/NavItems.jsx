@@ -17,8 +17,7 @@ const MyLink = (props) => {
   const [classname, setClassname] = useState('');
   useEffect(() => {
     const split = window.location.pathname.split('/');
-    const loc = split[split.length - 1]
-    if ((loc === '' && props.children.toLowerCase() === 'home') || (loc === props.children.toLowerCase())) {
+    if ((split.length === 2 && props.children.toLowerCase() === "home") || (split[2] === props.children.toLowerCase())) {
       setClassname('selected');
     } else {
       setClassname('');
