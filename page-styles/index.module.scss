@@ -1,0 +1,12 @@
+.socialLinkContainer {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: fit-content;
+  justify-content: space-evenly;
+  & a {
+    font-size: 30px;
+    color: #0088ff;
+    text-decoration: none;
+  }
+}

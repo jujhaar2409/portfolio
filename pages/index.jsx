@@ -1,26 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
-import styled from 'styled-components';
+import styles from '../page-styles/index.module.scss';
 
 import { index, contact } from '../content/data';
 import InfoCard from '../Components/InfoCard';
 import Layout from '../Layouts/Layout';
 
 const indexPageContent = index;
-
-const SocialLogoLink = styled.a`
-  font-size: 30px;
-  color: #0088ff;
-  text-decoration: none;
-`;
-
-const MyDiv = styled.div`
-  display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  height: fit-content;
-  justify-content: space-evenly;
-`;
 
 export default () => {
   return (
@@ -39,25 +25,23 @@ export default () => {
           <a className="cardA">Skills & Interests</a>
         </Link>
 
-        <MyDiv>
-          <SocialLogoLink href="https://www.linkedin.com/in/jujhaar-singh-984a861b5/">
+        <div className={styles.socialLinkContainer}>
+          <a href="https://www.linkedin.com/in/jujhaar-singh-984a861b5/">
             <i className="fab fa-linkedin"></i>
-          </SocialLogoLink>
-          <SocialLogoLink href="https://github.com/jujhaar2409">
+          </a>
+          <a href="https://github.com/jujhaar2409">
             <i className="fab fa-github-square"></i>
-          </SocialLogoLink>
-          <SocialLogoLink
-            href={`http://api.whatsapp.com/send?phone=${contact.phone}`}
-          >
+          </a>
+          <a href={`http://api.whatsapp.com/send?phone=${contact.phone}`}>
             <i className="fab fa-whatsapp"></i>
-          </SocialLogoLink>
-          <SocialLogoLink href={`mailto:${contact.email}`}>
+          </a>
+          <a href={`mailto:${contact.email}`}>
             <i className="fas fa-envelope"></i>
-          </SocialLogoLink>
-          <SocialLogoLink href="https://www.instagram.com/_jujhaar_singh_/">
+          </a>
+          <a href="https://www.instagram.com/_jujhaar_singh_/">
             <i className="fab fa-instagram"></i>
-          </SocialLogoLink>
-        </MyDiv>
+          </a>
+        </div>
 
         <Link href="/contact">
           <a className="cardA">Send me a message!</a>
