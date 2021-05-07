@@ -3,7 +3,6 @@ import React from "react";
 import { projects } from "../content/data";
 import Layout from "../Layouts/Layout";
 import InfoCard, {
-  BeforeHeading,
   CardHeading,
   Hr,
   CardContent,

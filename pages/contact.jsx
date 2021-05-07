@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { animated, useSpring } from 'react-spring';
 
 import Layout from '../Layouts/Layout';
-import { Div, Hr } from '../Components/InfoCard';
-import { contact } from '../content/data';
-import { getAutomaticTypeDirectiveNames } from 'typescript';
+import { Div } from '../Components/InfoCard';
 
 const ContactType = styled.h1`
   color: #0088ff;
