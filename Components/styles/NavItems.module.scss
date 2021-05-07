@@ -20,12 +20,13 @@
     transition: all 0.15s ease-in-out;
     width: 115px;
 
-    &:hover:not(:global .selected),
+    &:hover:not(.selected),
     &:active {
       letter-spacing: 0.5px;
     }
   }
-  & :global .selected {
-    background-color: #007deb;
-  }
+}
+
+.selected {
+  background-color: #007deb;
 }

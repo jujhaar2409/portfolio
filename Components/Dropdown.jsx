@@ -1,17 +1,19 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./styles/Dropdown.module.scss"
+import useSelected from "../hooks/useSelected"
 
 const MyLink = (props) => {
-  const [selected , setSelected] = useState(false);
-  useEffect(() => {
-    const split = window.location.pathname.split('/');
-    if ((split.length === 2 && props.children.toLowerCase() === "home") || (split[2] === props.children.toLowerCase())) {
-      setSelected(true)
-    } else {
-      setSelected(false)
-    }
-  }, []);
+  // const [selected , setSelected] = useState(false);
+  // useEffect(() => {
+  //   const split = window.location.pathname.split('/');
+  //   if ((split.length === 2 && props.children.toLowerCase() === "home") || (split[2] === props.children.toLowerCase())) {
+  //     setSelected(true)
+  //   } else {
+  //     setSelected(false)
+  //   }
+  // }, []);
+  const selected = useSelected(props.children.toLowerCase())
 
   return (
     <Link
