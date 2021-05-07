@@ -32,17 +32,17 @@ export default () => {
   return (
     <Layout title="Welcome!">
       <InfoCard>
-        <BeforeHeading>Hey, I'm</BeforeHeading>
-        <CardHeading>Jujhaar Singh</CardHeading>
-        <Hr />
-        <CardContent>{indexPageContent}</CardContent>
+        <h3>Hey, I'm</h3>
+        <h2>Jujhaar Singh</h2>
+        <hr />
+        <div>{indexPageContent}</div>
 
         <Link href="/projects">
-          <CardA>Projects</CardA>
+          <a className="cardA">Projects</a>
         </Link>
 
         <Link href="/skills">
-          <CardA>Skills & Interests</CardA>
+          <a className="cardA">Skills & Interests</a>
         </Link>
 
         <MyDiv>
@@ -66,7 +66,7 @@ export default () => {
         </MyDiv>
 
         <Link href="/contact">
-          <CardA>Send me a message!</CardA>
+          <a className="cardA">Send me a message!</a>
         </Link>
       </InfoCard>
     </Layout>

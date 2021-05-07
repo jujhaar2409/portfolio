@@ -1,6 +1,7 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
+import styles from "./styles/InfoCard.module.scss"
 
 export const Div = styled(animated.div)`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -79,7 +80,7 @@ const Card = (props) => {
       transform: `translateY(20px)`,
     },
   });
-  return <Div style={springProps}>{props.children}</Div>;
+  return <animated.div class={styles.Div} style={springProps}>{props.children}</animated.div>;
 };
 
 export default Card;
