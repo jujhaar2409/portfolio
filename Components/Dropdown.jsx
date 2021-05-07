@@ -5,7 +5,8 @@ import styles from "./styles/Dropdown.module.scss"
 const MyLink = (props) => {
   const [selected , setSelected] = useState(false);
   useEffect(() => {
-    let loc = window.location.pathname.split("/")[1];
+    const split = window.location.pathname.split('/');
+    const loc = split[split.length - 1]
     if ((loc === "" && props.children.toLowerCase() === "home") || loc === props.children.toLowerCase()) {
       setSelected(true)
     } else {

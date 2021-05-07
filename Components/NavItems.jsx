@@ -16,7 +16,8 @@ const NavItems = () => {
 const MyLink = (props) => {
   const [classname, setClassname] = useState('');
   useEffect(() => {
-    let loc = window.location.pathname.split('/')[1];
+    const split = window.location.pathname.split('/');
+    const loc = split[split.length - 1]
     if ((loc === '' && props.children.toLowerCase() === 'home') || (loc === props.children.toLowerCase())) {
       setClassname('selected');
     } else {
