@@ -1,0 +1,31 @@
+.LinkContainer {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 35px;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    /* font-weight: bold; */
+    padding: 14px 0 4px 0;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    width: 115px;
+
+    &:hover:not(:global .selected),
+    &:active {
+      letter-spacing: 0.5px;
+    }
+  }
+  & :global .selected {
+    background-color: #007deb;
+  }
+}
