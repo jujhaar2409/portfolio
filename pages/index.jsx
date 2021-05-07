@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from '../page-styles/index.module.scss';
+import Head from "next/head"
 
 import { index, contact } from '../content/data';
 import InfoCard from '../Components/InfoCard';
@@ -10,6 +11,11 @@ const indexPageContent = index;
 
 export default () => {
   return (
+    <>
+    <Head>
+    <title>Jujhaar's homepage</title>
+      <meta name="description" content="Jujhaar Singh's programming portfolio"></meta>
+    </Head>
     <Layout title="Welcome!">
       <InfoCard>
         <h3>Hey, I'm</h3>
@@ -48,5 +54,6 @@ export default () => {
         </Link>
       </InfoCard>
     </Layout>
+    </>
   );
 };

@@ -1,11 +1,16 @@
 import React from "react";
-
+import Head from "next/head"
 import { projects } from "../content/data";
 import Layout from "../Layouts/Layout";
 import InfoCard from "../Components/InfoCard";
 
 export default () => {
   return (
+    <>
+    <Head>
+    <title>Jujhaar's programming projects</title>
+    <meta name="description" content="Jujhaar Singh's programming projects"></meta>
+  </Head>
     <Layout title="Projects">
       {projects.map((project) => (
         <>
@@ -19,5 +24,6 @@ export default () => {
         </>
       ))}
     </Layout>
+    </>
   );
 };

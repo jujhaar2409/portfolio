@@ -1,6 +1,6 @@
 import React from "react";
 import { useTrail } from "react-spring";
-
+import Head from "next/head"
 import Card from "../Components/InfoCard";
 import List, { ListItem } from "../Components/List";
 import { skills } from "../content/data";
@@ -21,6 +21,11 @@ export default () => {
     },
   });
   return (
+    <>
+    <Head>
+      <title>Jujhaar's skills</title>
+    <meta name="description" content="Jujhaar Singh's skills related to programming"></meta>
+  </Head>
     <Layout title="Skills">
       {trail.map((anime, index) => {
         return (
@@ -36,5 +41,6 @@ export default () => {
         );
       })}
     </Layout>
+    </>
   );
 };

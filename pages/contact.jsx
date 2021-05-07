@@ -1,5 +1,6 @@
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
+import Head from "next/head"
 
 import Layout from '../Layouts/Layout';
 import Card from '../Components/InfoCard';
@@ -27,6 +28,11 @@ export default () => {
   };
 
   return (
+    <>
+  <Head>
+    <title>Contact Jujhaar</title>
+    <meta name="description" content="Contact Jujhaar Singh!"></meta>
+  </Head>
     <Layout title="Contact">
       <MyInfoCard style={springProps}>
         <iframe
@@ -40,5 +46,6 @@ export default () => {
         </iframe>
       </MyInfoCard>
     </Layout>
+    </>
   );
 };
