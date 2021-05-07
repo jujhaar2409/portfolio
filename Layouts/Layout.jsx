@@ -1,57 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
+import styles from "./styles/Layout.module.scss"
 
 import DropdownLogo from '../Components/DropdownLogo';
 import Dropdown from '../Components/Dropdown';
 import NavItems from '../Components/NavItems';
-
-const Container = styled.div`
-  top: 0;
-  left: 0;
-  position: fixed;
-  width: 100vw;
-  height: 57px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #0088ff;
-  color: #fff;
-  padding: 0px 20px 0px 20px;
-  font-family: 'Verdana' !important;
-  letter-spacing: -1.5px;
-  z-index: 101;
-`;
-
-const BodyContainer = styled.div`
-  margin-top: 30px;
-  font-family: Verdana !important;
-  @media screen and (min-width: 700px) {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-`;
-
-const Logo = styled.h1`
-  font-size: 34px;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  margin-top: 11px;
-  font-stretch: condensed;
-`;
-
-const PageTitle = styled.h1`
-  font-size: 50px;
-  text-align: center;
-  margin-top: 110px;
-  margin-bottom: 70px;
-  font-family: Verdana !important;
-  @media screen and (min-width: 700px) {
-    margin-top: 80px;
-    margin-bottom: 0;
-  }
-`;
 
 const Layout = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,22 +33,22 @@ const Layout = (props) => {
 
   return (
     <>
-      <Container>
-        <Logo>JS</Logo>
+      <div className={styles.container}>
+        <h1 className={styles.logo}>JS</h1>
         <NavItems />
         <DropdownLogo
           dropdownLogoRef={dropdownLogoRef}
           clicked={onDropdownLogoClick}
           isOpen={isOpen}
         />
-      </Container>
+      </div>
       <Dropdown
         dropdownRef={dropdownRef}
         isOpen={isOpen}
         clicked={onDropdownLogoClick}
       />
-      <PageTitle>{props.title}</PageTitle>
-      <BodyContainer>{props.children}</BodyContainer>
+      <h1 className={styles.pagetitle}>{props.title}</h1>
+      <div className={styles.bodycontainer}>{props.children}</div>
     </>
   );
 };

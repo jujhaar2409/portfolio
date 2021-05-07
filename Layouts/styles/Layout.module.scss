@@ -1,0 +1,47 @@
+.container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0088ff;
+  color: #fff;
+  padding: 0px 20px 0px 20px;
+  font-family: 'Verdana' !important;
+  letter-spacing: -1.5px;
+  z-index: 101;
+}
+
+.bodycontainer {
+  margin-top: 30px;
+  font-family: Verdana !important;
+  @media screen and (min-width: 700px) {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-top: 11px;
+  font-stretch: condensed;
+}
+
+.pagetitle {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 70px;
+  font-family: Verdana !important;
+  @media screen and (min-width: 700px) {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+}
