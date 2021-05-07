@@ -1,7 +1,7 @@
 import React from "react";
 import { useTrail } from "react-spring";
 
-import { CardHeading, Div, Hr } from "../Components/InfoCard";
+import Card from "../Components/InfoCard";
 import List, { ListItem } from "../Components/List";
 import { skills } from "../content/data";
 import Layout from "../Layouts/Layout";
@@ -24,15 +24,15 @@ export default () => {
     <Layout title="Skills">
       {trail.map((anime, index) => {
         return (
-          <Div style={anime}>
-            <CardHeading>{skills[index].title}</CardHeading>
-            <Hr />
+          <Card style={anime}>
+            <h2>{skills[index].title}</h2>
+            <hr />
             <List>
               {skills[index].list.map((item) => (
-                <ListItem>{item}</ListItem>
+                <ListItem key="index">{item}</ListItem>
               ))}
             </List>
-          </Div>
+          </Card>
         );
       })}
     </Layout>

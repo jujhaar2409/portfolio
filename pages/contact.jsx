@@ -1,25 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import { animated, useSpring } from 'react-spring';
 
 import Layout from '../Layouts/Layout';
-import { Div } from '../Components/InfoCard';
+import Card from '../Components/InfoCard';
 
-const ContactType = styled.h1`
-  color: #0088ff;
-  font-size: 25px;
-  padding-left: 35px;
-`;
-
-const ContactInfo = styled.p`
-  font-size: 19px;
-  font-weight: bold;
-  padding-left: 55px;
-  padding-bottom: 40px;
-`;
-const MyInfoCard = styled(animated(Div))`
-  text-align: left;
-`;
+const MyInfoCard = animated(Card)
 
 export default () => {
   const springProps = useSpring({

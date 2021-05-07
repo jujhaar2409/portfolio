@@ -2,12 +2,7 @@ import React from "react";
 
 import { projects } from "../content/data";
 import Layout from "../Layouts/Layout";
-import InfoCard, {
-  CardHeading,
-  Hr,
-  CardContent,
-  CardA,
-} from "../Components/InfoCard";
+import InfoCard from "../Components/InfoCard";
 
 export default () => {
   return (
@@ -15,11 +10,11 @@ export default () => {
       {projects.map((project) => (
         <>
           <InfoCard>
-            <CardHeading>{project.name}</CardHeading>
-            <Hr />
-            <CardContent>{project.description}</CardContent>
-            <CardA href={project.liveLocation}>Live Demo</CardA>
-            <CardA href={project.codeLocation}>See the Code</CardA>
+            <h2>{project.name}</h2>
+            <hr />
+            <div className="cardbody">{project.description}</div>
+            <a className="cardA" href={project.liveLocation}>Live Demo</a>
+            <a className="cardA" href={project.codeLocation}>See the Code</a>
           </InfoCard>
         </>
       ))}

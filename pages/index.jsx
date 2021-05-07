@@ -3,13 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { index, contact } from '../content/data';
-import InfoCard, {
-  BeforeHeading,
-  CardA,
-  CardContent,
-  CardHeading,
-  Hr,
-} from '../Components/InfoCard';
+import InfoCard from '../Components/InfoCard';
 import Layout from '../Layouts/Layout';
 
 const indexPageContent = index;
@@ -35,7 +29,7 @@ export default () => {
         <h3>Hey, I'm</h3>
         <h2>Jujhaar Singh</h2>
         <hr />
-        <div>{indexPageContent}</div>
+        <div className="cardbody">{indexPageContent}</div>
 
         <Link href="/projects">
           <a className="cardA">Projects</a>
