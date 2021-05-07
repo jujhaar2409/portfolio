@@ -1,37 +1,23 @@
 export const skills = [
   {
     title: 'Languages',
-    list: [
-      'Python',
-      'Javascript',
-      'Typescript',
-      'Golang',
-      'C++',
-      'Java',
-      'HTML',
-      'CSS',
-    ],
+    list: ['Python', 'Javascript', 'Typescript', 'Golang', 'C++', 'Java'],
   },
   {
-    title: 'Frontend Web Frameworks',
+    title: 'Backend',
+    list: ['ExpressJs', 'Nextjs', 'Django', 'Flask', 'Echo(go)'],
+  },
+  {
+    title: 'Frontend',
     list: ['Reactjs', 'Nextjs'],
   },
   {
-    title: 'Backend Web Frameworks',
-    list: ['ExpressJs', 'Flask', 'Echo(go)', 'Nextjs'],
+    title: 'Python libs',
+    list: ['Matplotlib', 'Tkinter', 'Numpy', 'openCV'],
   },
   {
-    title: 'Python Libraries',
-    list: ['Flask', 'Matplotlib', 'Tkinter', 'Numpy'],
-  },
-  {
-    title: 'Other Skills',
-    list: [
-      'Basics of Android development',
-      'Basics of iOS development',
-      'Basics of Spring Framework for Java',
-      'Basics of Kotlin',
-    ],
+    title: 'Machine Learning',
+    list: ['Tensorflow'],
   },
 ];
 
@@ -51,4 +37,4 @@ export const contact = {
 };
 
 export const index =
-  'Hey I am Jujhaar Singh, currently a fresher at IIT Bombay. I enjoy coding. I do it in my free time as a hobby. Some of my skills and interests are listed on this web page. Feel free to contact me if you find something interesting! To learn more about me click the button below!';
+  'Hey I am Jujhaar Singh, currently a fresher at IIT Bombay. Programming is one of the things that interests me. Some of my skills and interests are listed on this web page. Feel free to contact me if you find something interesting!';
