@@ -34,7 +34,7 @@ export default () => {
     <meta name="description" content="Contact Jujhaar Singh!"></meta>
   </Head>
     <Layout title="Contact">
-      <MyInfoCard style={springProps}>
+      <MyInfoCard style={{...springProps, width: "50%"}}>
         <iframe
           style={iframeStyle}
           src="https://docs.google.com/forms/d/e/1FAIpQLSctmO9MDFO-E9RxygkTfSXDdcNVrAZDqPJ0XTkuMAAmNl0rVg/viewform?embedded=true"

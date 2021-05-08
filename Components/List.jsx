@@ -3,7 +3,7 @@ import styles from "./styles/List.module.scss"
 
 export const ListItem = (props) => {
   return (
-    <div>
+    <div className={styles.ItemDiv}>
       <span className={styles.ItemMarker} />
       <p className={styles.ItemText}>{props.children}</p>
     </div>

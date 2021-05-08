@@ -17,7 +17,7 @@ export default () => {
       <meta name="description" content="Jujhaar Singh's programming portfolio"></meta>
     </Head>
     <Layout title="Welcome!">
-      <InfoCard>
+      <InfoCard style={{width: "40%"}}>
         <h3>Hey, I'm</h3>
         <h2>Jujhaar Singh</h2>
         <hr />
