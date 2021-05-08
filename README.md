@@ -1,5 +1,7 @@
-# This is my portfolio site
+# My portfolio website
 
-Its a static website generated using nextjs
+[click here](https://jujhaar2409.github.io/portfolio/)
 
-Check it out here: https://homepages.iitb.ac.in/~200110052
+## Tech
+
+Uses nextjs and its static generation to produce a fast and lightweight single page website.
