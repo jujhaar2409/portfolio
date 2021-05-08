@@ -7,7 +7,7 @@
 		"start": "next start",
 		"export": "next build && next export",
 		"deploy": "git add out && git commit -m 'Deploy gh-pages' && git subtree push --prefix out origin ghpages",
-		"clean": "git rm out && rm -rf out",
+		"clean": "git rm -r out && rm -rf out",
 		"export-and-deploy": "npm run export && npm run deploy"
 	},
 	"dependencies": {
