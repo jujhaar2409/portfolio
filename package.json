@@ -6,7 +6,8 @@
 		"build": "next build",
 		"start": "next start",
 		"export": "next build && next export",
-		"export-to-docs": "next build && next export && rm -rf docs && mv ./out ./docs"
+		"deploy": "git add out && git commit -m 'Deploy gh-pages' && git subtree push --prefix out origin gh-pages",
+		"export-and-deploy": "npm run export && npm run deploy"
 	},
 	"dependencies": {
 		"@types/next": "^9.0.0",
