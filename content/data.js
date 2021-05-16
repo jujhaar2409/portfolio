@@ -29,6 +29,20 @@ export const projects = [
     liveLocation: 'https://jujhaar2409.github.io/flaPPPPPy-bird/',
     codeLocation: 'https://github.com/jujhaar2409/flaPPPPPy-bird',
   },
+  {
+    name: 'Extensions',
+    description:
+      'Some pieces of code that I wrote to improve ones experience on the web',
+    liveLocation: 'https://jujhaar2409.github.io/extensions/',
+    codeLocation: 'https://github.com/jujhaar2409/extensions',
+  },
+  {
+    name: 'Acad Resources',
+    description:
+      'I upload resources that I made for college courses here',
+    liveLocation: 'https://jujhaar2409.github.io/acad-resources/',
+    codeLocation: 'https://github.com/jujhaar2409/acad-resources',
+  },
 ];
 
 export const contact = {
