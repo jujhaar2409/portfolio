@@ -1,11 +1,11 @@
 export const skills = [
   {
     title: 'Languages',
-    list: ['Python', 'Javascript', 'Typescript', 'Golang', 'C++', 'Java'],
+    list: ['Python', 'Javascript', 'Typescript', 'Golang', 'C++'],
   },
   {
     title: 'Backend',
-    list: ['ExpressJs', 'Nextjs', 'Django', 'Flask', 'Echo(go)'],
+    list: ['ExpressJs', 'Nextjs', 'Django', 'Echo(go)'],
   },
   {
     title: 'Frontend',
@@ -17,7 +17,7 @@ export const skills = [
   },
   {
     title: 'Machine Learning',
-    list: ['Tensorflow'],
+    list: ['Tensorflow', 'pandas', 'Numpy'],
   },
 ];
 
@@ -32,7 +32,7 @@ export const projects = [
   {
     name: 'Extensions',
     description:
-      'Some pieces of code that I wrote to improve ones experience on the web',
+      'Some pieces of (js) code that I wrote to improve ones experience on the web',
     liveLocation: 'https://jujhaar2409.github.io/extensions/',
     codeLocation: 'https://github.com/jujhaar2409/extensions',
   },
@@ -42,6 +42,20 @@ export const projects = [
       'I upload resources that I made for college courses here',
     liveLocation: 'https://jujhaar2409.github.io/acad-resources/',
     codeLocation: 'https://github.com/jujhaar2409/acad-resources',
+  },
+  {
+    name: 'JSt Tech - Blog',
+    description:
+      'This is my blog site, which I plan to maintain, made using hugo',
+    liveLocation: 'https://jst-tech.codes/',
+    codeLocation: 'https://github.com/jujhaar2409/blog',
+  },
+  {
+    name: 'This website!',
+    description:
+      'I made this website using nextjs static generation from the ground up, you can check out the code at the link below',
+    // liveLocation: 'https://jst-tech.codes/',
+    codeLocation: 'https://github.com/jujhaar2409/portfolio',
   },
 ];
 
