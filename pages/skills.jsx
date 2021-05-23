@@ -26,10 +26,10 @@ export default () => {
       <title>Jujhaar's skills</title>
     <meta name="description" content="Jujhaar Singh's skills related to programming"></meta>
   </Head>
-    <Layout title="Skills">
+    <Layout title="Skills and Interests">
       {trail.map((anime, index) => {
         return (
-          <Card style={anime}>
+          <Card style={{...anime, ...{width: "12%", minWidth: "220px"}}} class="noshadow">
             <h2>{skills[index].title}</h2>
             <hr />
             <List>

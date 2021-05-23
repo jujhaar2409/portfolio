@@ -16,7 +16,8 @@ const Card = (props) => {
       transform: `translateY(20px)`,
     },
   });
-  return <animated.div className={styles.Div} style={{...springProps, ...props.style}}>{props.children}</animated.div>;
+  // return <animated.div class={`${styles.Div} ${props.class ? props.class : ""}`} style={{...springProps, ...props.style}}>{props.children}</animated.div>;
+  return <animated.div class={`${styles.Div} ${styles[props.class]}`} style={{...springProps, ...props.style}}>{props.children}</animated.div>;
 };
 
 export default Card;
