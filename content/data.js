@@ -37,25 +37,25 @@ export const projects = [
     codeLocation: 'https://github.com/jujhaar2409/extensions',
   },
   {
-    name: 'Acad Resources',
-    description:
-      'I upload resources that I made for college courses here',
-    liveLocation: 'https://jujhaar2409.github.io/acad-resources/',
-    codeLocation: 'https://github.com/jujhaar2409/acad-resources',
-  },
-  {
     name: 'JSt Tech - Blog',
     description:
-      'This is my blog site, which I plan to maintain, made using hugo',
+    'This is my blog site, which I plan to maintain, made using hugo',
     liveLocation: 'https://jst-tech.codes/',
     codeLocation: 'https://github.com/jujhaar2409/blog',
   },
   {
     name: 'This website!',
     description:
-      'I made this website using nextjs static generation from the ground up, you can check out the code at the link below',
+    'I made this website using nextjs static generation from the ground up, you can check out the code at the link below',
     // liveLocation: 'https://jst-tech.codes/',
     codeLocation: 'https://github.com/jujhaar2409/portfolio',
+  },
+  {
+    name: 'Acad Resources',
+    description:
+      'I upload resources that I made for college courses here',
+    liveLocation: 'https://jujhaar2409.github.io/acad-resources/',
+    codeLocation: 'https://github.com/jujhaar2409/acad-resources',
   },
 ];
 
