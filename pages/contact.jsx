@@ -1,11 +1,11 @@
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
-import Head from "next/head"
+import Head from 'next/head';
 
 import Layout from '../Layouts/Layout';
 import Card from '../Components/InfoCard';
 
-const MyInfoCard = animated(Card)
+const MyInfoCard = animated(Card);
 
 export default () => {
   const springProps = useSpring({
@@ -29,23 +29,23 @@ export default () => {
 
   return (
     <>
-  <Head>
-    <title>Contact Jujhaar</title>
-    <meta name="description" content="Contact Jujhaar Singh!"></meta>
-  </Head>
-    <Layout title="Contact">
-      <MyInfoCard style={{...springProps, width: "50%"}}>
-        <iframe
-          style={iframeStyle}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSctmO9MDFO-E9RxygkTfSXDdcNVrAZDqPJ0XTkuMAAmNl0rVg/viewform?embedded=true"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >
-          Loading…
-        </iframe>
-      </MyInfoCard>
-    </Layout>
+      <Head>
+        <title>Contact Jujhaar</title>
+        <meta name="description" content="Contact Jujhaar Singh!"></meta>
+      </Head>
+      <Layout title="Contact">
+        <MyInfoCard style={{ ...springProps, width: '50%' }}>
+          <iframe
+            style={iframeStyle}
+            src="https://docs.google.com/forms/d/e/1FAIpQLSctmO9MDFO-E9RxygkTfSXDdcNVrAZDqPJ0XTkuMAAmNl0rVg/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </MyInfoCard>
+      </Layout>
     </>
   );
 };
