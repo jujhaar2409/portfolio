@@ -5,5 +5,5 @@ module.exports = {
   assetPrefix: isProd
     ? 'https://cdn.statically.io/gh/jujhaar2409/portfolio/ghpages/'
     : '',
-  basePath: isProd ? '/portfolio' : '',
+  // basePath: isProd ? '/portfolio' : '',
 };
