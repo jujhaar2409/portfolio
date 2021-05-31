@@ -33,14 +33,15 @@ export default () => {
         {trail.map((anime, index) => {
           return (
             <Card
+              key={index}
               style={{ ...anime, ...{ width: '12%', minWidth: '220px' } }}
-              class="noshadow"
+              className="noshadow"
             >
               <h2>{skills[index].title}</h2>
               <hr />
               <List>
-                {skills[index].list.map((item) => (
-                  <ListItem key="index">{item}</ListItem>
+                {skills[index].list.map((item, j) => (
+                  <ListItem key={j}>{item}</ListItem>
                 ))}
               </List>
             </Card>

@@ -34,7 +34,7 @@
   a {
     color: #0088ff;
     font-size: 30px;
-    font-weight: 100;
+    font-weight: 400;
     display: grid;
     padding-right: 0;
     margin-right: auto;
@@ -45,7 +45,7 @@
     text-decoration: none;
   }
   .selected {
-      display: inline-block;
+    display: inline-block;
     font-weight: 900;
   }
 }

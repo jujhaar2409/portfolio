@@ -30,7 +30,7 @@ export default () => {
       </Head>
       <Layout title="Projects">
         {projects.map((project, i) => (
-          <>
+          <React.Fragment key={i}>
             <InfoCard style={trail[i]}>
               <h2>{project.name}</h2>
               <hr />
@@ -50,7 +50,7 @@ export default () => {
                 ''
               )}
             </InfoCard>
-          </>
+          </React.Fragment>
         ))}
       </Layout>
     </>
