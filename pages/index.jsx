@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from '../page-styles/index.module.scss';
-import Head from 'next/head';
 
 import { index, contact } from '../content/data';
 import InfoCard from '../Components/InfoCard';
@@ -9,17 +8,16 @@ import Layout from '../Layouts/Layout';
 
 const indexPageContent = index;
 
+  const seo = {
+    title: "Jujhaar Singh",
+    desc: "Jujhaar Singh - Student, Enthusiast, Programmer" ,
+    url: "https://jujhaar.codes/"
+  }
+
 export default () => {
   return (
     <>
-      <Head>
-        <title>Jujhaar's homepage</title>
-        <meta
-          name="description"
-          content="Jujhaar Singh's programming portfolio"
-        ></meta>
-      </Head>
-      <Layout title="Welcome!">
+      <Layout title="Welcome!" seo={seo}>
         <InfoCard style={{ width: '40%' }}>
           <h3>Hey, I'm</h3>
           <h2>Jujhaar Singh</h2>

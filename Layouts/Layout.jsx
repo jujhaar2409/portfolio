@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from "./styles/Layout.module.scss"
+import Head from "next/head"
 
 import DropdownLogo from '../Components/DropdownLogo';
 import Dropdown from '../Components/Dropdown';
@@ -31,8 +32,20 @@ const Layout = (props) => {
     };
   }, [dropdownRef]);
 
+  //! see meaning of the meta data terms here: https://ogp.me/
   return (
     <>
+    <Head>
+        <title>{props.seo.title}</title>
+        <meta name="description" content={props.seo.desc} />
+        <meta property="og:title" content={props.seo.title} />
+        <meta property="og:site_name" content="JujhaarSingh" />
+        <meta property="og:description" content={props.seo.desc} />
+        <meta property="og:url" content={props.seo.url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content={props.seo.image ?? ""} />
+    </Head>
       <div className={styles.container}>
         <h1 className={styles.logo}>JS</h1>
         <NavItems />

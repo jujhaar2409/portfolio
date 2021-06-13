@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import { projects } from '../content/data';
 import { useTrail } from 'react-spring';
 import Layout from '../Layouts/Layout';
@@ -19,16 +18,16 @@ export default () => {
       transform: `translateY(20px)`,
     },
   });
+
+  const seo = {
+    title: "Jujhaar's projects",
+    desc: "Jujhaar's tech projects" ,
+    url: "https://jujhaar.codes/projects"
+  }
+
   return (
     <>
-      <Head>
-        <title>Jujhaar's programming projects</title>
-        <meta
-          name="description"
-          content="Jujhaar Singh's programming projects"
-        ></meta>
-      </Head>
-      <Layout title="Projects">
+      <Layout title="Projects" seo={seo}>
         {projects.map((project, i) => (
           <React.Fragment key={i}>
             <InfoCard style={trail[i]}>

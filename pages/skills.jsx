@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTrail } from 'react-spring';
-import Head from 'next/head';
 import Card from '../Components/InfoCard';
 import List, { ListItem } from '../Components/List';
 import { skills } from '../content/data';
@@ -20,16 +19,16 @@ export default () => {
       transform: `translateY(20px)`,
     },
   });
+
+  const seo = {
+    title: "Jujhaar's skills",
+    desc: "Some of Jujhaar's programming skills" ,
+    url: "https://jujhaar.codes/skills"
+  }
+
   return (
     <>
-      <Head>
-        <title>Jujhaar's skills</title>
-        <meta
-          name="description"
-          content="Jujhaar Singh's skills related to programming"
-        ></meta>
-      </Head>
-      <Layout title="Skills and Interests">
+      <Layout title="Skills and Interests" seo={seo}>
         {trail.map((anime, index) => {
           return (
             <Card

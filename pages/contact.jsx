@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 
 import Layout from '../Layouts/Layout';
 import Card from '../Components/InfoCard';
@@ -16,13 +15,15 @@ export default () => {
     document.querySelector("iframe").style.opacity = 1
   }
 
+  const seo = {
+    title: "Contact Jujhaar",
+    desc: "Contact Jujhaar Singh!" ,
+    url: "https://jujhaar.codes/contact"
+  }
+
   return (
     <>
-      <Head>
-        <title>Contact Jujhaar</title>
-        <meta name="description" content="Contact Jujhaar Singh!"></meta>
-      </Head>
-      <Layout title="Contact">
+      <Layout title="Contact" seo={seo}>
         <Card style={{ width: '50%' }}>
             <iframe
             style={iframeStyle}
